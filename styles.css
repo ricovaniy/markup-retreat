@@ -1,1 +1,20 @@
-/* Пиши стили тут */
+.stars{
+    width:100px;
+    height:100px;
+    position: absolute;
+    display:flex;
+    flex-direction: row-reverse;
+    right: 550px;
+}
+.stars .rate{
+    width: 100px;
+    height: 100px;
+}
+
+.stars .rate:hover ~ .rate {
+    content: url('img/star.png');
+}
+
+.stars .rate:hover {
+    content: url('img/star.png');
+}
