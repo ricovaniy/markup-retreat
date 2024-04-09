@@ -1,20 +1,40 @@
-.stars{
-    width:100px;
-    height:100px;
-    position: absolute;
-    display:flex;
-    flex-direction: row-reverse;
-    right: 550px;
-}
-.stars .rate{
-    width: 100px;
+.stars {
+    position: relative;
+    width: 500px;
     height: 100px;
 }
 
-.stars .rate:hover ~ .rate {
-    content: url('img/star.png');
+input[type="radio"] {
+    display: none;
 }
 
-.stars .rate:hover {
-    content: url('img/star.png');
+input[type="radio"]:checked ~ label {
+    background-image: url('img/star.png');
+}
+
+input[type="radio"]:checked ~ label ~ label {
+    background-image: url('img/star.png');
+}
+
+label {
+    float: right;
+    cursor: pointer;
+    background-image: url('img/star-empty.png');
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+}
+
+label:hover ~label {
+    background-image: url('img/star.png');
+}
+
+label:hover {
+    background-image: url('img/star.png');
+}
+
+input[type="radio"]:checked ~ label::before {
+    font-size: 2em;
+    color: gold;
 }
